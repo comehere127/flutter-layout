@@ -5,13 +5,15 @@ class PositionedBlock extends StatelessWidget {
   final double screenRatioW;
   final double posSRBottom;
   final double posSRLeft;
+  final Color? bgColor;
 
-  const PositionedBlock(
-      {Key? key,
-      required this.screenRatioW,
-      required this.posSRBottom,
-      required this.posSRLeft})
-      : super(key: key);
+  const PositionedBlock({
+    Key? key,
+    required this.screenRatioW,
+    required this.posSRBottom,
+    required this.posSRLeft,
+    this.bgColor,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class PositionedBlock extends StatelessWidget {
       left: srSize.width * posSRLeft,
       child: Opacity(
         opacity: 0.5,
-        child: Block(color: Colors.grey.shade800),
+        child: Block(color: bgColor ?? Colors.grey.shade900),
       ),
     );
   }
