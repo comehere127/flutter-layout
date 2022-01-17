@@ -86,11 +86,11 @@ class BlockPage extends StatelessWidget {
           Expanded(child: Block(color: Colors.pink.shade400)),
         ],
       ),
-      const PositionedBlock(
+      PositionedBlock(
         screenRatioW: 1 / 3,
         posSRBottom: 1 / 5,
         posSRLeft: 1 / 7,
-        bgColor: Colors.black87,
+        bgColor: Colors.grey.shade700,
       ),
     ]);
   }
